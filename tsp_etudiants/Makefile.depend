@@ -1,0 +1,3 @@
+obj/instance.o: src/instance.cpp include/instance.h
+obj/main.o: src/main.cpp include/tsps.h include/instance.h include/instance.h
+obj/tsps.o: src/tsps.cpp include/tsps.h include/instance.h
