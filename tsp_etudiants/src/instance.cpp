@@ -113,13 +113,21 @@ bool Instance::Save( const char* filename ) const
 	return true;
 }
 
+
+//@negans-soyez
 bool Instance::IsSymmetric() const
 {
 	double epsilon(std::numeric_limits<double>::epsilon());
 
-
-	/* TODO : A COMPLETER */
-	/* ... */
+	for ( int i=0; i<m_NbNodes; i++ )
+	{
+		for( int j=i+1; j<m_NbNodes; j++ )
+		{
+			// Différence absolue entre les coûts de l'arête (i,j) et (j,i)
+			if( std::fabs(m_Costs[i][j]-m_Costs[j][i])>epsilon )
+				return false;
+		}
+	}
 
 	return true;
 }
