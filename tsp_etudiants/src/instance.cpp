@@ -35,12 +35,20 @@ const Matrix & Instance::GetCostMatrix() const
 }
 
 
-
-
-
 void Instance::Print() const
 {
+
+	std::cout << "seed -> " << m_Seed << std::endl;
 	std::cout << "number of nodes -> " << m_NbNodes << std::endl;
+
+	for (int i; i < m_NbNodes; i++){
+		for (int j; j < m_NbNodes; j++){
+			std::cout << m_Costs[i][j] << " " << std::endl;
+		}
+		std::cout << "\n" << std::endl;
+	}
+
+
 
 	/* TODO : A COMPLETER */
 	/* ... */
