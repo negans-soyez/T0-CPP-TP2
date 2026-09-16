@@ -15,23 +15,26 @@
 
 Instance::Instance( const int seed, const int nb_nodes, const Matrix & costs ) : m_Seed(seed), m_NbNodes(nb_nodes), m_Costs(costs){}
 
+
+//1) 
 int Instance::GetSeed() const
 {
-	/* TODO : A CORRIGER */
-	return 0;
+	return m_Seed;
 }
 
 int Instance::GetNbNodes() const
 {
-	/* TODO : A CORRIGER */
-	return 0;
+	return m_NbNodes;
 }
 
 const Matrix & Instance::GetCostMatrix() const
 {
-	/* TODO : A CORRIGER */
-	return Matrix();
+	return m_Costs;
 }
+
+
+
+
 
 void Instance::Print() const
 {
